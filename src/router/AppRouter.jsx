@@ -3,16 +3,16 @@ import { Route, Routes } from "react-router-dom"
 import { LogInPage } from '../auth'
 import { HeroesRoutes } from "../heroes"
 import { PrivateRoute } from "./PrivateRoute"
-import { PublicRouter } from "./PublicRouter"
+import { PublicRoute } from "./PublicRoute"
 
 export const AppRouter = () => {
   return (
     <>
       <Routes>
           <Route path="login" element={
-            <PublicRouter>
+            <PublicRoute>
               <LogInPage />
-            </PublicRouter>
+            </PublicRoute>
           } />
 
           <Route path ="/*" element={
